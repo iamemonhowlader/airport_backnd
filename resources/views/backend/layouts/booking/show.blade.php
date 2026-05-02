@@ -76,6 +76,10 @@
                                 <div class="fw-bold">{{ optional($booking->service_date)->format('Y-m-d') ?? '-' }}</div>
                             </div>
                             <div class="col-md-6">
+                                <div class="text-muted small mb-1">Flight Time (24-hour format)</div>
+                                <div class="fw-bold">{{ $booking->flight_time ?? '-' }}</div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="text-muted small mb-1">Guests</div>
                                 <div class="fw-bold">{{ $booking->guest_count ?? '-' }}</div>
                             </div>

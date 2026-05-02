@@ -28,6 +28,7 @@ class BookingController extends Controller
             'flight_code' => Str::upper(trim($data['flight_code'])),
             'route' => $data['route'] ?? null,
             'service_date' => $data['service_date'] ?? null,
+            'flight_time' => $data['flight_time'] ?? null,
             'guest_count' => $data['guest_count'] ?? null,
             'ticket_image_path' => $ticketImagePath,
             'comment' => $data['comment'] ?? null,
@@ -41,6 +42,13 @@ class BookingController extends Controller
                 'status' => $booking->status,
                 'ticket_image_url' => $booking->ticket_image_url,
                 'created_at' => $booking->created_at,
+                'flight_time' => $booking->flight_time,
+                'service_date' => $booking->service_date,
+                'service_type' => $booking->service_type,
+                'flight_code' => $booking->flight_code,
+                'full_name' => $booking->full_name,
+                'phone_number' => $booking->phone_number,
+                'email' => $booking->email,
             ],
         ]);
     }

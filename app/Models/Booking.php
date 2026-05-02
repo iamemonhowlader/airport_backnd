@@ -15,6 +15,7 @@ class Booking extends Model
         'flight_code',
         'route',
         'service_date',
+        'flight_time',
         'guest_count',
         'ticket_image_path',
         'comment',

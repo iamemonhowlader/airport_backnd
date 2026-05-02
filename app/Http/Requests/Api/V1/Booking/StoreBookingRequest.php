@@ -30,6 +30,7 @@ class StoreBookingRequest extends FormRequest
             'flight_code' => ['required', 'string', 'max:20'],
             'route' => ['nullable', 'string', 'max:40'],
             'service_date' => ['nullable', 'date'],
+            'flight_time' => ['nullable', 'string', 'max:10', 'regex:/^([01][0-9]|2[0-3]):[0-5][0-9]$/'],
             'guest_count' => ['nullable', 'string', 'max:20'],
 
             'ticket_image' => ['nullable', 'file', 'image', 'max:5120'], // 5MB
