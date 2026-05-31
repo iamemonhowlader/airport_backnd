@@ -6,6 +6,10 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
+Route::get('/admin', function () {
+    return redirect()->route('dashboard');
+})->middleware(['auth', 'verified'])->name('admin.dashboard');
+
 Route::get('/dashboard', function () {
     return view('backend.layouts.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');

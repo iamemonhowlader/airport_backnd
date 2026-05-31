@@ -18,6 +18,7 @@
     <!--Stylesheets-->
     <!-- ===============================================-->
     @include('backend.partials.styles')
+    @stack('styles')
 </head>
 
 <body>

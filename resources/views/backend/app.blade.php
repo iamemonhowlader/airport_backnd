@@ -18,12 +18,14 @@
     <!--Stylesheets-->
     <!-- ===============================================-->
     @include('backend.partials.styles')
+    @stack('styles')
 </head>
 
 <body>
 
     <main id="main-wrapper" class="main-wrapper">
         @include('backend.partials.navbar')
+        <div class="mobile-sidebar-backdrop" data-sidebar-close></div>
         
         <div id="db-wrapper">
             @include('backend.partials.header')

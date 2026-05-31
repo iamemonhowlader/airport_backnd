@@ -28,4 +28,11 @@ class BookingController
 
         return redirect()->back()->with('success', 'Booking status updated successfully.');
     }
+
+    public function destroy(Booking $booking): RedirectResponse
+    {
+        $booking->delete();
+
+        return redirect()->route('admin.bookings.index')->with('success', 'Booking deleted successfully.');
+    }
 }

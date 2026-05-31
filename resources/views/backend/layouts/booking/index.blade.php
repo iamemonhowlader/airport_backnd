@@ -73,10 +73,19 @@
                                 </span>
                             </td>
                             <td class="py-3 pe-4 text-end">
-                                <a class="btn btn-sm btn-primary text-white shadow-sm hover-lift"
-                                   href="{{ route('admin.bookings.show', $b) }}">
-                                    <i class="fas fa-eye me-1"></i> View
-                                </a>
+                                <div class="d-inline-flex gap-2">
+                                    <a class="btn btn-sm btn-primary text-white shadow-sm hover-lift"
+                                       href="{{ route('admin.bookings.show', $b) }}">
+                                        <i class="fas fa-eye me-1"></i> View
+                                    </a>
+                                    <form action="{{ route('admin.bookings.destroy', $b) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this booking?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-danger text-white shadow-sm hover-lift">
+                                            <i class="fas fa-trash me-1"></i> Delete
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @empty

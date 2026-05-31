@@ -11,5 +11,6 @@ Route::prefix('/admin/bookings')
         Route::get('/', 'index')->name('index');
         Route::get('/{booking}', 'show')->name('show');
         Route::patch('/{booking}/status', 'updateStatus')->name('updateStatus');
+        Route::delete('/{booking}', 'destroy')->name('destroy');
     });
 

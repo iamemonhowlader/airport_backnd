@@ -133,6 +133,29 @@
 
 @stack('scripts')
 <script>
+    $(function() {
+        const $mainWrapper = $('#main-wrapper');
+
+        $('[data-sidebar-close]').on('click', function() {
+            $mainWrapper.removeClass('toggled');
+        });
+
+        $('.navbar-vertical .nav-link').on('click', function() {
+            if (window.innerWidth < 992) {
+                $mainWrapper.removeClass('toggled');
+            }
+        });
+
+        $(window).on('resize', function() {
+            if (window.innerWidth >= 992) {
+                $('.mobile-sidebar-backdrop').hide();
+            } else {
+                $('.mobile-sidebar-backdrop').removeAttr('style');
+            }
+        });
+    });
+</script>
+<script>
     if (typeof feather !== 'undefined') {
         feather.replace();
     }

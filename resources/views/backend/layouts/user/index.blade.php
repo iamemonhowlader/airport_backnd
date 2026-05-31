@@ -27,9 +27,7 @@
     <div id="overlay"
         style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.5); z-index:9999;">
     </div>
-    <div id="app-content">
-        <div class="app-content-area">
-            <div class="container-fluid">
+            <div class="container-fluid py-5">
                 <div>
                     <!-- row -->
                     <div class="row">
@@ -71,8 +69,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 @endsection
 
 
